@@ -28,7 +28,27 @@ const $ = document.querySelector.bind(document)
  var count =0;
  var arrayTemp = [];
 
- alert('Lười nên chỉ code trước có 10 bài thui =)), rảnh e thêm')
+function toast() {
+    const main = document.getElementById('message')
+    if (main) {
+      const toast = document.createElement('div') /* tạo cái này và cái function khác nhau */
+      toast.innerHTML = `
+      <div class="message">
+      <div>
+        <img class="message-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuP8QzfMxI-ciD579Kt_esfekrkmhYMN49dQ&usqp=CAU" alt="">
+      </div>
+      <div>
+        
+        <div class="message-heading">Having a good time</div>
+        <div class="message-title">Listening to music to have lover 😜</div>
+      </div>
+    </div>`
+    main.appendChild(toast)
+    }
+} 
+setTimeout(function() {
+  toast()
+  }, 1000)
 
  const app = {
    currentIndex: 0,
@@ -36,66 +56,162 @@ const $ = document.querySelector.bind(document)
    isRandom: false,
    isRepeat: false,
    songs:  [
-        {
+          {
               name: 'How You Like That',
               singer: 'Black Pink',
               path: './assets/music/song1.mp3',
               image: './assets/img/song1.png',
-         },
-         {
+          },
+          {
+            name: 'As If It’s Your Last',
+              singer: 'BLACKPINK',
+              path: './assets/music/song25.mp3',
+              image: './assets/img/song25.png',
+          },
+          {
+            name: 'Lovesick Girl',
+              singer: 'BLACKPINK',
+              path: './assets/music/song23.mp3',
+              image: './assets/img/song23.png',
+          },
+          {
               name: '3107 3',
               singer: 'W/n ft.Nâu, Duongg, Titie',
               path: './assets/music/song2.mp3',
               image: './assets/img/song2.png',
-            },
-            {
-            name: 'Cheating on You',
-              singer: 'Charlie Puth',
-              path: './assets/music/song3.mp3',
-              image: './assets/img/song3.png',
-        },
-            {
-            name: 'Heat Waves',
-              singer: 'Glass Animals - DjKomangRimex',
-              path: './assets/music/song4.mp3',
-              image: './assets/img/song4.png',
-        },
-            {
-            name: 'comethru',
-              singer: 'Jeremy Zucker',
-              path: './assets/music/song5.mp3',
-              image: './assets/img/song5.png',
-        },
-        {
-        name: 'At My Worst',
-          singer: 'Pink Sweat',
-          path: './assets/music/song6.mp3',
-          image: './assets/img/song6.png',
-    },
-    {
-    name: 'Rather Be Without Me Mashup',
-      singer: 'Eminem ft Clean Bandit',
-      path: './assets/music/song7.mp3',
-      image: './assets/img/song7.png',
-},
-            {
-            name: 'Reality',
-              singer: 'Lost Frequencies',
-              path: './assets/music/song8.mp3',
-              image: './assets/img/song8.png',
-        },
-            {
+          },
+          {
+            name: 'Price Tag',
+              singer: 'Jessie J feat. B.o.B',
+              path: './assets/music/song22.mp3',
+              image: './assets/img/song22.png',
+          },
+          {
+            name: 'Love Story',
+              singer: 'Taylor Swift',
+              path: './assets/music/song24.mp3',
+              image: './assets/img/song24.png',
+          },
+          {
             name: 'You Belong With Me',
               singer: 'Taylor Swift',
               path: './assets/music/song9.mp3',
               image: './assets/img/song9.png',
-        },
-            {
+          },
+          {
+            name: 'At My Worst',
+              singer: 'Pink Sweat',
+              path: './assets/music/song6.mp3',
+              image: './assets/img/song6.png',
+              },
+          {
+            name: 'To The Moon',
+              singer: 'Hooligan',
+              path: './assets/music/song26.mp3',
+              image: './assets/img/song26.png',
+          },
+          {
+            name: 'Reality',
+              singer: 'Lost Frequencies',
+              path: './assets/music/song8.mp3',
+              image: './assets/img/song8.png',
+          },
+          {
+            name: 'Girls Like You',
+              singer: 'Maroon 5 ft. Cardi B',
+              path: './assets/music/song27.mp3',
+              image: './assets/img/song27.png',
+          },
+          {
+            name: 'Cheating on You',
+            singer: 'Charlie Puth',
+            path: './assets/music/song3.mp3',
+            image: './assets/img/song3.png',
+          },
+          {
+            name: 'Heat Waves',
+              singer: 'Glass Animals - DjKomangRimex',
+              path: './assets/music/song4.mp3',
+              image: './assets/img/song4.png',
+          },
+          {
+            name: 'comethru',
+              singer: 'Jeremy Zucker',
+              path: './assets/music/song5.mp3',
+              image: './assets/img/song5.png',
+          },
+/*           {
+    name: 'Rather Be Without Me Mashup',
+      singer: 'Eminem ft Clean Bandit',
+      path: './assets/music/song7.mp3',
+      image: './assets/img/song7.png',
+          }, */
+          {
             name: 'Thức Giấc',
               singer: 'Da LAB',
               path: './assets/music/song10.mp3',
               image: './assets/img/song10.png',
-        }
+          },
+          {
+            name: 'Sometimes Just Like This',
+              singer: 'Chainsmokers & Coldplay',
+              path: './assets/music/song11.mp3',
+              image: './assets/img/song11.png',
+          },
+/*           {
+            name: 'Believer',
+              singer: 'Imagine Dragons',
+              path: './assets/music/song12.mp3',
+              image: './assets/img/song12.png',
+          }, */
+          {
+            name: 'Memories',
+              singer: 'Maroon 5',
+              path: './assets/music/song13.mp3',
+              image: './assets/img/song13.png',
+          },
+          {
+            name: 'Lối Nhỏ',
+              singer: 'Đen Vâu ft. Phương Anh Đào',
+              path: './assets/music/song15.mp3',
+              image: './assets/img/song15.png',
+          },
+/*           {
+            name: 'Ex\'s Hate Me',
+              singer: 'BRAY ft AMEE',
+              path: './assets/music/song16.mp3',
+              image: './assets/img/song16.png',
+          }, */
+          {
+            name: 'Muộn Rồi Mà Sao Còn',
+              singer: 'Sơn Tùng MTP',
+              path: './assets/music/song17.mp3',
+              image: './assets/img/song17.png',
+          },
+          {
+            name: 'Bye Bye Baby Blue',
+              singer: 'Glass Animals',
+              path: './assets/music/song18.mp3',
+              image: './assets/img/song18.png',
+          },
+          {
+            name: 'Chuyện Đôi Ta',
+              singer: 'Da LAB ft. Muội',
+              path: './assets/music/song19.mp3',
+              image: './assets/img/song19.png',
+          },
+          {
+            name: 'Từ Ngày Em Đến',
+              singer: 'Da LAB',
+              path: './assets/music/song20.mp3',
+              image: './assets/img/song20.png',
+          },
+          {
+            name: 'Toxic Friends',
+              singer: 'BoyWithUke',
+              path: './assets/music/song21.mp3',
+              image: './assets/img/song21.png',
+          },
     ],
     render:function() {
       const htmls = this.songs.map((song, index) => {
@@ -194,7 +310,6 @@ const $ = document.querySelector.bind(document)
         /* phải check thằng duration vì giá trị đầu tiên của nó là NaN */
         if (audio.duration) {
           const progressPercent = Math.floor(audio.currentTime / audio.duration * 100)
-          console.log(audio.currentTime / audio.duration * 100)
           progress.value = progressPercent
           progress.style.background = 'linear-gradient(to right, #ec1f55 0%, #ec1f55 ' + progressPercent + '%, #d3d3d3 ' + progressPercent + '%, #d3d3d3 100%)' /* làm thanh thời gian kéo dài từ đầu tới cuối */
         }
@@ -268,6 +383,7 @@ const $ = document.querySelector.bind(document)
         } else {
           nextBtn.click()
         }
+        _this.scrollToActiveSong()
     }
       
       /* xử lí bài hát khi chạy hết có bật random */
@@ -277,6 +393,7 @@ const $ = document.querySelector.bind(document)
         } else {
           _this.nextSong()
         }
+        _this.scrollToActiveSong()
         audio.play()
         /* thay từ if tới audio.play() thay bằng nextBtn.click(), này là máy tự bấm next khi hết bài  */
       }
@@ -303,8 +420,8 @@ const $ = document.querySelector.bind(document)
           }
         }
     },
-      /* Scroll to view */ 
 
+      /* Scroll to view */ 
       scrollToActiveSong: function() {
         setTimeout(() => {
           if (this.currentIndex <= 3) {
