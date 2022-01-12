@@ -209,10 +209,10 @@ header h2 {
   align-items: center;
   max-width: 42%;
   background-image: linear-gradient(to right, #ffafbd, #ffc3a0);
-  animation: SlideFromRight ease-in 0.5s, Faded linear 0.4s 2s forwards;
+  animation: SlideFromRight ease-in 0.3s, Faded linear 0.4s 6s forwards;
 }
 .message-img {
-  width: 80px;
+  width: 102px;
   display: block;
 }
 .message-title,
@@ -222,7 +222,7 @@ header h2 {
   color: #fff;
 }
 .message-heading {
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   font-weight: 400;
 }
 
@@ -265,14 +265,20 @@ header h2 {
     margin-top: 10px;
   }
   .message {
-    max-width: 100%;
+    max-width: 84%;
     top: 18px;
-    right: 3px;
-    animation: SlideFromTop ease-in 0.8s, Faded linear 0.5s 3s forwards;
+    left: 0px;
+    animation: SlideFromTop ease-in 0.5s, Faded linear 0.5s 5.5s forwards;
   }
   .message-title,
   .message-heading {
     font-size: 17px;
     margin-left: 10px;
+  }
+  .message-img {
+    width: 90px;
+  }
+  .message-title {
+    line-height: 1;
   }
 }
