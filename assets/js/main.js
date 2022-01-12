@@ -40,7 +40,7 @@ function toast() {
       <div>
         
         <div class="message-heading">Having a good time</div>
-        <div class="message-title">Listening to music to have lover 😜</div>
+        <div class="message-title">You have to listening to music <br/> regularly to have lover 😜</div>
       </div>
     </div>`
     main.appendChild(toast)
@@ -158,12 +158,12 @@ setTimeout(function() {
               path: './assets/music/song11.mp3',
               image: './assets/img/song11.png',
           },
-/*           {
+          {
             name: 'Believer',
               singer: 'Imagine Dragons',
               path: './assets/music/song12.mp3',
               image: './assets/img/song12.png',
-          }, */
+          },
           {
             name: 'Memories',
               singer: 'Maroon 5',
